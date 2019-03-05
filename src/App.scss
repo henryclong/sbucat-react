@@ -182,6 +182,12 @@ p {
 }
 
 .Footer {
+  align-items: center;
   background-color: $primary;
+  display: flex;
   grid-area: footer;
+  justify-content: center;
+  p {
+    font-size: 0.75em;
+  }
 }
