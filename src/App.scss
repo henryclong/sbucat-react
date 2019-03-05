@@ -21,10 +21,6 @@ h1 {
   color: $white;
 }
 
-p {
-  color: $white;
-}
-
 .App {
   background-color: $grey-light;
   display: grid;
@@ -105,4 +101,7 @@ p {
 .Footer {
   background-color: $primary;
   grid-area: footer;
+  p {
+    color: $white;
+  }
 }

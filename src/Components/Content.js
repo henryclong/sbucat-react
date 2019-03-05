@@ -7,10 +7,6 @@ import MapTab from './Tabs/MapTab';
 
 class Content extends Component {
 
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<div className='Content'>
