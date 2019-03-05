@@ -31,7 +31,7 @@ class App extends Component {
         />
 
         <div className='Footer'>
-          <h1>Footer</h1>
+          <p>Built with <i className='fab fa-react'/> and <i class="fab fa-sass"/></p>
         </div>
 
       </div>
