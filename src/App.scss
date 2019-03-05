@@ -35,8 +35,7 @@ p {
       "content"
       "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 5em 4em auto auto 5em;
-  grid-gap: 1em;
+  grid-template-rows: 5em auto auto 5em;
   margin: 0;
   min-height: 100vh;
   padding: 0;
@@ -63,31 +62,102 @@ p {
   }
 }
 
+.AppHideTabs {
+  @media screen and (max-width: $window-size-small) {
+    grid-template-rows: 5em 0em auto 5em;
+    .TabBar {
+      visibility: hidden;
+    }
+  }
+}
+
 .Header {
   background-color: $primary;
+  display: grid;
   grid-area: header;
+  grid-template-areas: "logo title menu_toggle";
+  grid-template-columns: 5em 4fr 1fr;
+  .Logo {
+    grid-area: logo;
+    height: 4em;
+    padding: 0.5em;
+  }
+  .Title {
+    align-items: center;
+    display:flex;
+    grid-area: title;
+    justify-content: flex-start;
+    margin: 0;
+    text-align: center;
+  }
+  .MenuToggle {
+    background-color: $primary;
+    border: none;
+    color: $white;
+    float: right;
+    grid-area: menu_toggle;
+    margin: 0;
+    i {
+      font-size: 3em;
+    }
+    @media screen and (min-width: $window-size-small) {
+      visibility: hidden;
+    }
+  }
+  .MenuToggle:active {
+    color: $black;
+  }
 }
 
 .TabBar {
-  align-items: center;
+  align-items: stretch;
   border-radius: 0.5em;
   display: flex;
+  flex-direction: column;
   grid-area: tabs;
   justify-content: space-between;
+  margin-top: 0.5em;
   .Tab {
     background-color: $white;
     border: none;
     border-radius: 0.5em;
     flex: 1;
-    margin: 1em;
+    font-family: $default-font;
+    margin: 0.5em;
+    overflow: hidden;
     padding: 1em 0.5em 1em 0.5em;
+    position: relative;
+    .TabFill {
+      align-items: center;
+      background-color: $primary;
+      color: $white;
+      display:flex;
+      font-size: 1.5em;
+      height: 100%;
+      justify-content: center;
+      left: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      width: 0;
+
+      transform: translate(-50%, -50%);
+      transition-property: width;
+      transition-duration: 0.25s;
+      transition-timing-function: ease-out;
+    }
   }
   .Tab:hover {
-    background-color: $primary;
     color: white;
+    .TabFill {
+      width: 100%;
+    }
   }
   .Tab:active {
     background-color: $black;
+  }
+  @media screen and (min-width: $window-size-small) {
+    flex-direction: row;
   }
 }
 
@@ -98,6 +168,7 @@ p {
   background-color: $white;
   border-radius: 0.5em;
   grid-area: content;
+  margin: 0.5em;
   min-width: 50px;
   min-height: 50px;
 }
