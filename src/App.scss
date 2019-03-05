@@ -90,9 +90,15 @@ body {
   grid-area: content;
   min-width: 50px;
   min-height: 50px;
+  overflow: hidden;
 }
 
 .Footer {
   border: 1px solid $black;
   grid-area: footer;
+}
+
+.Map {
+  height: 100%;
+  width: 100%;
 }
