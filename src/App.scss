@@ -122,12 +122,36 @@ p {
     border: none;
     border-radius: 0.5em;
     flex: 1;
+    font-family: $default-font;
     margin: 0.5em;
+    overflow: hidden;
     padding: 1em 0.5em 1em 0.5em;
+    position: relative;
+    .TabFill {
+      align-items: center;
+      background-color: $primary;
+      color: $white;
+      display:flex;
+      font-size: 1.5em;
+      height: 100%;
+      justify-content: center;
+      left: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      width: 0;
+
+      transform: translate(-50%, -50%);
+      transition-property: width;
+      transition-duration: 0.25s;
+      transition-timing-function: ease-out;
+    }
   }
   .Tab:hover {
-    background-color: $primary;
     color: white;
+    .TabFill {
+      width: 100%;
+    }
   }
   .Tab:active {
     background-color: $black;
