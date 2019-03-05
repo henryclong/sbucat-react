@@ -1,28 +1,51 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Content from './Components/Content';
+import TabBar from './Components/TabBar';
+import './App.scss';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      current_tab: this.props.tabs[0].id,
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+
+        <div className='Header'>
+          <h1>SBU Cat Network</h1>
+        </div>
+
+        <TabBar
+          current_tab={this.state.current_tab}
+          on_change={(tab) => {this.setState({ current_tab: tab.id })}}
+          tabs={this.props.tabs}
+        />
+
+        <Content
+          current_tab={this.state.current_tab}
+        />
+
+        <div className='Footer'>
+          <h1>Footer</h1>
+        </div>
+
       </div>
     );
   }
+}
+
+App.defaultProps = {
+  tabs: [
+    { label: ' Home', id: 'HOME', icon: 'fas fa-home' },
+    { label: ' Feeder Signup', id: 'FEEDER_SIGNUP', icon: 'fas fa-clipboard-list' },
+    { label: ' Campus Map', id: 'CAMPUS_MAP', icon: 'fas fa-map-marked-alt' },
+    { label: ' FAQ', id: 'FAQ', icon: 'fas fa-question-circle' },
+  ],
 }
 
 export default App;
