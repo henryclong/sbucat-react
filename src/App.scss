@@ -85,13 +85,17 @@ p {
   .Title {
     align-items: center;
     display:flex;
+    font-size: 1.5em;
     grid-area: title;
     justify-content: flex-start;
     margin: 0;
     text-align: center;
+    @media screen and (min-width: 430px) {
+      font-size: 2em;
+    }
   }
   .MenuToggle {
-    background-color: $primary;
+    background-color: transparent;
     border: none;
     color: $white;
     float: right;
@@ -123,10 +127,14 @@ p {
     border-radius: 0.5em;
     flex: 1;
     font-family: $default-font;
+    font-size: 1.0em;
     margin: 0.5em;
     overflow: hidden;
     padding: 1em 0.5em 1em 0.5em;
     position: relative;
+    @media screen and (min-width: $window-size-small) {
+      font-size: 0.75em;
+    }
     .TabFill {
       align-items: center;
       background-color: $primary;
