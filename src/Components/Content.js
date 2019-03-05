@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import HomeTab from '../Tabs/HomeTab';
-import SignUpTab from '../Tabs/SignUpTab';
-import FAQTab from '../Tabs/FAQTab';
-import MapTab from '../Tabs/MapTab';
+import HomeTab from './Tabs/HomeTab';
+import EventTab from './Tabs/EventTab';
+import SignUpTab from './Tabs/SignUpTab';
+import FAQTab from './Tabs/FAQTab';
+import MapTab from './Tabs/MapTab';
 
 class Content extends Component {
 
