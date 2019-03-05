@@ -31,7 +31,7 @@ class App extends Component {
         />
 
         <div className='Footer'>
-          <p>Built with <i className='fab fa-react'/> and <i class="fab fa-sass"/></p>
+          <p><i className='fab fa-react'/> <i class="fab fa-sass"/> <i class="fab fa-font-awesome-flag"></i></p>
         </div>
 
       </div>
@@ -42,10 +42,14 @@ class App extends Component {
 App.defaultProps = {
   tabs: [
     { label: ' Home', id: 'HOME', icon: 'fas fa-home' },
+    { label: ' Events', id: 'EVENTS', icon: 'fas fa-calendar-alt' },
     { label: ' Feeder Signup', id: 'FEEDER_SIGNUP', icon: 'fas fa-clipboard-list' },
     { label: ' Campus Map', id: 'CAMPUS_MAP', icon: 'fas fa-map-marked-alt' },
     { label: ' FAQ', id: 'FAQ', icon: 'fas fa-question-circle' },
   ],
+  locations: [
+    { label: 'Kelly', id: 'KELLY', lat: 0, lon: 0 }
+  ]
 }
 
 export default App;
