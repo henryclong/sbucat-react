@@ -76,15 +76,17 @@ p {
   display: grid;
   grid-area: header;
   grid-template-areas: "logo title menu_toggle";
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 5em 4fr 1fr;
   .Logo {
     grid-area: logo;
+    height: 4em;
+    padding: 0.5em;
   }
   .Title {
     align-items: center;
     display:flex;
     grid-area: title;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0;
     text-align: center;
   }

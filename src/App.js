@@ -18,6 +18,7 @@ class App extends Component {
       <div className={(!this.state.show_tabs)?'App AppHideTabs':'App'}>
 
         <div className='Header'>
+        <img src='sbucat_logo.svg' alt='sbu_cat_logo' className='Logo'/>
           <h1 className='Title'>SBU Cat Network</h1>
           <button
             className='MenuToggle'
