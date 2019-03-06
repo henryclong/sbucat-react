@@ -9,20 +9,33 @@ class App extends Component {
     super(props);
     this.state = {
       current_tab: this.props.tabs[0].id,
+      show_tabs: false,
     };
   }
 
   render() {
     return (
-      <div className="App">
+      <div className={(!this.state.show_tabs)?'App AppHideTabs':'App'}>
 
         <div className='Header'>
-          <h1>SBU Cat Network</h1>
+        <img src='sbucat_logo.svg' alt='sbu_cat_logo' className='Logo'/>
+          <h1 className='Title'>SBU Cat Network</h1>
+          <button
+            className='MenuToggle'
+            onClick={()=>{
+              this.setState({show_tabs: !this.state.show_tabs});
+            }}
+          >
+            <i class="fas fa-bars"/>
+          </button>
         </div>
 
         <TabBar
           current_tab={this.state.current_tab}
-          on_change={(tab) => {this.setState({ current_tab: tab.id })}}
+          on_change={(tab) => {this.setState({
+            current_tab: tab.id,
+            show_tabs: false,
+          })}}
           tabs={this.props.tabs}
         />
 
