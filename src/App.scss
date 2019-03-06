@@ -132,29 +132,38 @@ h1 {
       font-size: 0.75em;
     }
     .TabFill {
-      align-items: center;
-      background-color: $primary;
-      color: $white;
-      display:flex;
-      font-size: 1.5em;
-      height: 100%;
-      justify-content: center;
-      left: 50%;
-      overflow: hidden;
-      position: absolute;
-      top: 50%;
-      width: 0;
+      visibility: hidden;
+      @media screen and (min-width: $window-size-small) {
+        align-items: center;
+        background-color: $primary;
+        color: $white;
+        display: flex;
+        font-size: 1.5em;
+        height: 100%;
+        justify-content: center;
+        left: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        visibility: visible;
+        width: 0;
 
-      transform: translate(-50%, -50%);
-      transition-property: width;
-      transition-duration: 0.25s;
-      transition-timing-function: ease-out;
+        transform: translate(-50%, -50%);
+        transition-property: width;
+        transition-duration: 0.25s;
+        transition-timing-function: ease-out;
+      }
     }
   }
   .Tab:hover {
-    color: white;
-    .TabFill {
-      width: 100%;
+    background-color: $primary;
+    color: $white;
+    @media screen and (min-width: $window-size-small) {
+      background-color: $white;
+      color: $black;
+      .TabFill {
+        width: 100%;
+      }
     }
   }
   .Tab:active {

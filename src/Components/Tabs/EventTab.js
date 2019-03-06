@@ -6,6 +6,7 @@ class EventTab extends Component {
     return (
       <div>
         <h1>Events</h1>
+        <hr/>
         {
           events.semester_list.map((semester) => (
             <div>
