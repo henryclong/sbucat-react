@@ -184,6 +184,7 @@ h1 {
   margin: 0.5em;
   min-width: 50px;
   min-height: 50px;
+  overflow: hidden;
 }
 
 .Footer {
@@ -222,4 +223,9 @@ h1 {
   @media screen and (min-width: $window-size-big) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.Map {
+  height: 100%;
+  width: 100%;
 }
