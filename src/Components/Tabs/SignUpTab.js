@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import signup from './site_content/signup.json';
 
 class SignUpTab extends Component {
     render() {
       return (
-        <h1>Sign Up</h1>
+        <div className='SignUpTab'>
+          <h1>{signup.title}</h1>
+          <p>{signup.description}</p>
+          <a href={signup.url_address} >{signup.url_label}</a>
+        </div>
       );
     }
 }
