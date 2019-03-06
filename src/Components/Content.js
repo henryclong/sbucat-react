@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import HomeTab from '../Tabs/HomeTab';
-import SignUpTab from '../Tabs/SignUpTab';
-import FAQTab from '../Tabs/FAQTab';
-import MapTab from '../Tabs/MapTab';
+import HomeTab from './Tabs/HomeTab';
+import EventTab from './Tabs/EventTab';
+import SignUpTab from './Tabs/SignUpTab';
+import FAQTab from './Tabs/FAQTab';
+import MapTab from './Tabs/MapTab';
 
 class Content extends Component {
-
-	constructor(props) {
-		super(props);
-	}
 
 	render() {
 		return (
@@ -16,6 +13,8 @@ class Content extends Component {
 				{
 					(this.props.current_tab === 'HOME')?
 						<HomeTab/>
+					:(this.props.current_tab === 'EVENTS')?
+						<EventTab/>
 					:(this.props.current_tab === 'FEEDER_SIGNUP')?
 						<SignUpTab/>
 					:(this.props.current_tab === 'CAMPUS_MAP')?

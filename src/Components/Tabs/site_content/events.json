@@ -1,0 +1,77 @@
+{
+    "semester_list": [
+        {
+            "semester": "Spring 2019",
+            "event_list": [
+                {
+                    "date": {
+                        "day": 11,
+                        "month": 1,
+                        "year": 2019
+                    },
+                    "title": "Sample Title 1",
+                    "description": "Sample Description 1"
+                },
+                {
+                    "date": {
+                        "day": 11,
+                        "month": 1,
+                        "year": 2019
+                    },
+                    "title": "Sample Title 1",
+                    "description": "Sample Description 1"
+                },
+                {
+                    "date": {
+                        "day": 11,
+                        "month": 1,
+                        "year": 2019
+                    },
+                    "title": "Sample Title 1",
+                    "description": "Sample Description 1"
+                },
+                {
+                    "date": {
+                        "day": 11,
+                        "month": 1,
+                        "year": 2019
+                    },
+                    "title": "Sample Title 1",
+                    "description": "Sample Description 1"
+                }
+            ]
+        },
+        {
+            "semester": "Fall 2018",
+            "event_list": [
+                {
+                    "date": {
+                        "day": 11,
+                        "month": 1,
+                        "year": 2019
+                    },
+                    "title": "Sample Title 1",
+                    "description": "Sample Description 1"
+                },
+                {
+                    "date": {
+                        "day": 11,
+                        "month": 1,
+                        "year": 2019
+                    },
+                    "title": "Sample Title 1",
+                    "description": "Sample Description 1"
+                },
+                {
+                    "date": {
+                        "day": 11,
+                        "month": 1,
+                        "year": 2019
+                    },
+                    "title": "Sample Title 1",
+                    "description": "Sample Description 1"
+                }
+            ]
+        }
+    ]
+}
