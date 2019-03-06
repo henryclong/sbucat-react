@@ -44,7 +44,7 @@ class App extends Component {
         />
 
         <div className='Footer'>
-          <p><i className='fab fa-react'/> <i className="fab fa-sass"/> <i className="fab fa-font-awesome-flag"></i></p>
+          <p>Created by Henry Long with <i className='fab fa-react'/> <i class="fab fa-sass"/> <i class="fab fa-font-awesome-flag"></i></p>
         </div>
 
       </div>
