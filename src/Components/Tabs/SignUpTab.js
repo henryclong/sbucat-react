@@ -6,6 +6,7 @@ class SignUpTab extends Component {
       return (
         <div className='SignUpTab'>
           <h1>{signup.title}</h1>
+          <hr/>
           <p>{signup.description}</p>
           <a href={signup.url_address} >{signup.url_label}</a>
         </div>
