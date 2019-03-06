@@ -8,7 +8,7 @@ $grey-mid: #a7a7a7;
 $grey-light: #eeeeee;
 $white: #ffffff;
 
-$window-size-big: 950px;
+$window-size-big: 1020px;
 $window-size-small: 700px;
 
 $default-font: 'Roboto Slab', serif;
@@ -18,10 +18,6 @@ body {
 }
 
 h1 {
-  color: $white;
-}
-
-p {
   color: $white;
 }
 
@@ -186,8 +182,34 @@ p {
   background-color: $primary;
   display: flex;
   grid-area: footer;
-  justify-content: center;
   p {
-    font-size: 0.75em;
+    color: $white;
+  }
+}
+
+.EventsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  margin: 1em;
+  .Event {
+    background-color: $grey-light;
+    border-radius: 0.5em;
+    padding: 1em;
+    .title {
+
+    }
+    .date {
+
+    }
+    .desc {
+
+    }
+  }
+  @media screen and (min-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: $window-size-big) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
