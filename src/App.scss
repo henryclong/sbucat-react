@@ -182,6 +182,7 @@ h1 {
   background-color: $primary;
   display: flex;
   grid-area: footer;
+  justify-content: center;
   p {
     color: $white;
   }
