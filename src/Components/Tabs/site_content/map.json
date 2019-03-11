@@ -1,0 +1,18 @@
+{
+    "locations": [
+        {
+            "name": "Kelly",
+            "lat": 0.0,
+            "lon": 0.0,
+            "station": true,
+            "shelter": true
+        },
+        {
+            "name": "Tabler",
+            "lat": 0.0,
+            "lon": 0.0,
+            "station": true,
+            "shelter": true
+        }
+    ]
+}
