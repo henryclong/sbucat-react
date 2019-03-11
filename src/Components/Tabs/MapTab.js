@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import map from './site_content/map.json';
 import { Map, Marker, Tooltip, TileLayer } from 'react-leaflet'
 
-const position = [40.916635, -73.123167];//[40.9154, -73.1234];
+const position = [40.916635, -73.123167];
 
 class MapTab extends Component {
   render() {
