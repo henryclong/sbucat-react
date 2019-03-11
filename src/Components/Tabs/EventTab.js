@@ -14,12 +14,9 @@ class EventTab extends Component {
               <div className='EventsList'>
                 {semester.event_list.map((item) => (
                   <div className='Event'>
-                    <h2 className='title'>{item.title}</h2>
-                    <p className='date'>{item.date.day + '-' + item.date.day}</p>
+                    <h2 className='title'>{item.date.day + '-' + item.date.day}</h2>
+                    <h2 className='date'>{item.title}</h2>
                     <p className='desc'>{item.description}</p>
-                    <span className='EventOverlay'>
-                      <h3>{item.description}</h3>
-                    </span>
                   </div>
                 ))}
               </div>

@@ -11,7 +11,11 @@ $white: #ffffff;
 $window-size-big: 1020px;
 $window-size-small: 700px;
 
-$default-font: 'Roboto Slab', serif;
+$roboto-slab: 'Roboto Slab', serif;
+$lato: 'Lato', sans-serif;
+$quicksand: 'Quicksand', sans-serif;
+
+$default-font: $roboto-slab;
 
 body {
   margin: 0;
@@ -204,13 +208,17 @@ h1 {
   grid-gap: 1em;
   margin: 1em;
   .Event {
-    background-color: $grey-light;
-    border-radius: 0.5em;
+    background-color: $white;
+    border-radius: 1em;
+    border: solid 0.075em $primary;
     overflow: hidden;
-    padding: 1em;
+    padding: 0;
     position: relative;
     .title {
-
+      background-color: $primary;
+      color: $white;
+      padding: 0.5em;
+      margin-top: 0;
     }
     .date {
 
@@ -218,39 +226,10 @@ h1 {
     .desc {
 
     }
-    .EventOverlay {
-      visibility: hidden;
-    }
   }
   
   @media screen and (min-width: 500px) {
     grid-template-columns: 1fr 1fr;
-    .EventOverlay {
-      align-items: center;
-      background-color: $primary;
-      display: flex;
-      height: 0;
-      justify-content: center;
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      transition-property: width height;
-      transition-duration: 0.25s;
-      transition-timing-function: ease-out;
-      visibility: hidden;
-      width: 100%;
-      h3 {
-        color: $white;
-        height: auto;
-      }
-    }
-    .Event:hover {
-      .EventOverlay {
-        height: 100%;
-        visibility: visible;
-      }
-    }
   }
   @media screen and (min-width: $window-size-big) {
     grid-template-columns: 1fr 1fr 1fr;
