@@ -10,6 +10,7 @@
                         "year": 2019
                     },
                     "title": "Sample Title 1",
+                    "location": "SAC 304",
                     "description": "Sample Description 1"
                 },
                 {
@@ -19,6 +20,7 @@
                         "year": 2019
                     },
                     "title": "Sample Title 1",
+                    "location": "SAC 304",
                     "description": "Sample Description 1"
                 },
                 {
@@ -28,6 +30,7 @@
                         "year": 2019
                     },
                     "title": "Sample Title 1",
+                    "location": "SAC 304",
                     "description": "Sample Description 1"
                 },
                 {
@@ -37,6 +40,7 @@
                         "year": 2019
                     },
                     "title": "Sample Title 1",
+                    "location": "SAC 304",
                     "description": "Sample Description 1"
                 }
             ]
@@ -46,30 +50,63 @@
             "event_list": [
                 {
                     "date": {
-                        "day": 11,
-                        "month": 1,
-                        "year": 2019
+                        "day": 12,
+                        "month": 4,
+                        "year": 2018
                     },
-                    "title": "Sample Title 1",
-                    "description": "Sample Description 1"
+                    "title": "Sample Title 2",
+                    "location": "Old CS Lobby",
+                    "description": "Sample Description 2"
                 },
                 {
                     "date": {
-                        "day": 11,
-                        "month": 1,
-                        "year": 2019
+                        "day": 12,
+                        "month": 4,
+                        "year": 2018
                     },
-                    "title": "Sample Title 1",
-                    "description": "Sample Description 1"
+                    "title": "Sample Title 2",
+                    "location": "Old CS Lobby",
+                    "description": "Sample Description 2"
                 },
                 {
                     "date": {
-                        "day": 11,
-                        "month": 1,
-                        "year": 2019
+                        "day": 12,
+                        "month": 4,
+                        "year": 2018
                     },
-                    "title": "Sample Title 1",
-                    "description": "Sample Description 1"
+                    "title": "Sample Title 2",
+                    "location": "Old CS Lobby",
+                    "description": "Sample Description 2"
+                },
+                {
+                    "date": {
+                        "day": 12,
+                        "month": 4,
+                        "year": 2018
+                    },
+                    "title": "Sample Title 2",
+                    "location": "Old CS Lobby",
+                    "description": "Sample Description 2"
+                },
+                {
+                    "date": {
+                        "day": 12,
+                        "month": 4,
+                        "year": 2018
+                    },
+                    "title": "Sample Title 2",
+                    "location": "Old CS Lobby",
+                    "description": "Sample Description 2"
+                },
+                {
+                    "date": {
+                        "day": 12,
+                        "month": 4,
+                        "year": 2018
+                    },
+                    "title": "Sample Title 2",
+                    "location": "Old CS Lobby",
+                    "description": "Sample Description 2"
                 }
             ]
         }
