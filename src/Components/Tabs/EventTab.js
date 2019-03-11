@@ -3,8 +3,8 @@ import events from './site_content/events.json';
 
 class EventTab extends Component {
 
-  openEventModal = () => {
-    
+  openEventModal = (event) => {
+    this.props.show_event(event);
   }
 
   render() {
@@ -18,7 +18,7 @@ class EventTab extends Component {
               <h2>{semester.semester}</h2>
               <div className='EventsList'>
                 {semester.event_list.map((item) => (
-                  <div className='Event'>
+                  <div className='Event' onClick={()=>this.openEventModal(item)}>
                     <h2 className='title'>{item.date.day + '-' + item.date.day}</h2>
                     <h2 className='date'>{item.title}</h2>
                     <p className='location'>{item.location}</p>

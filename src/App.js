@@ -12,11 +12,12 @@ class App extends Component {
       current_tab: this.props.tabs[0].id,
       show_tabs: false,
       show_event_modal: false,
+      current_event: null,
     };
   }
 
   show_event = (event) => {
-    this.setState({show_event_modal: true});
+    this.setState({show_event_modal: true, current_event: event});
   }
 
   hide_event = () => {
@@ -65,10 +66,23 @@ class App extends Component {
           isOpen={this.state.show_event_modal}
           onRequestClose={this.hide_event}
           contentLabel="Example Modal"
+          style={{
+            overlay: {
+              backgroundColor: 'rgba(99, 99, 99, 0.75)'
+            }
+          }}
+          className='EventModal'
         >
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-          <button onClick={this.hide_event}>close</button>
-          <div>I am a modal</div>
+          {(this.state.current_event != null)?
+          <div>
+            <h2 ref={subtitle => this.subtitle = subtitle}>{this.state.current_event.title}</h2>
+            <div className='EventModalContent'>
+              <h3>{this.state.current_event.location}</h3>
+              <p>{this.state.current_event.description}</p>
+            </div>
+            <button onClick={this.hide_event}>close</button>
+          </div>
+          :<div/>}
         </Modal>
       </div>
     );

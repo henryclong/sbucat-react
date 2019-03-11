@@ -14,7 +14,7 @@ class Content extends Component {
 					(this.props.current_tab === 'HOME')?
 						<HomeTab/>
 					:(this.props.current_tab === 'EVENTS')?
-						<EventTab/>
+						<EventTab show_event={this.props.show_event} hide_event={this.props.hide_event}/>
 					:(this.props.current_tab === 'FEEDER_SIGNUP')?
 						<SignUpTab/>
 					:(this.props.current_tab === 'CAMPUS_MAP')?
