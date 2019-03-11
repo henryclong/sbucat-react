@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import events from './site_content/events.json';
 
 class EventTab extends Component {
+
+  openEventModal = () => {
+    
+  }
+
   render() {
     return (
       <div>
