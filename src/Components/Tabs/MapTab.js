@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import map from './site_content/map.json';
+import { Map, Marker, Tooltip, TileLayer } from 'react-leaflet'
 
-const position = [40.9154, -73.1234];
+const position = [40.916635, -73.123167];//[40.9154, -73.1234];
 
 class MapTab extends Component {
   render() {
@@ -10,9 +11,16 @@ class MapTab extends Component {
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-        />        <Marker className='Marker' position={position}>
-          <Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-        </Marker>
+        />
+        {
+          map.locations.map((l)=>(
+            <Marker className='Marker' position={l.location}>
+              {<Tooltip className='ToolTip' direction='top' offset={[0, -5]} opacity={1.0} permanent>
+                <span>{l.label}</span>
+              </Tooltip>}
+            </Marker>
+          ))
+        }
       </Map>
     );
   }

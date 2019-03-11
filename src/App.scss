@@ -228,6 +228,10 @@ h1 {
 .Map {
   height: 100%;
   width: 100%;
+  .ToolTip {
+    color: $primary;
+    font-family: $default-font;
+  }
 }
 
 .SignUpTab {
