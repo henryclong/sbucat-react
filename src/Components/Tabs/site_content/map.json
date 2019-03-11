@@ -1,4 +1,8 @@
 {
+    "properties": {
+        "center": [40.916635, -73.123167],
+        "zoom": 14.5
+    },
     "locations": [
         {
             "id": "KELLY",

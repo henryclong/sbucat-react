@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import map from './site_content/map.json';
 import { Map, Marker, Tooltip, TileLayer } from 'react-leaflet'
 
-const position = [40.916635, -73.123167];
-
 class MapTab extends Component {
   render() {
     return (
-      <Map className='Map' center={position} zoom={14.5}>
+      <Map className='Map' center={map.properties.center} zoom={map.properties.zoom}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
