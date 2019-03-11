@@ -16,7 +16,8 @@ class EventTab extends Component {
                   <div className='Event'>
                     <h2 className='title'>{item.date.day + '-' + item.date.day}</h2>
                     <h2 className='date'>{item.title}</h2>
-                    <p className='desc'>{item.description}</p>
+                    <p className='location'>{item.location}</p>
+                    <span className='EventOverlay'><i class="fas fa-info-circle"></i></span>
                   </div>
                 ))}
               </div>
