@@ -15,38 +15,42 @@ class App extends Component {
 
   render() {
     return (
-      <div className={(!this.state.show_tabs)?'App AppHideTabs':'App'}>
+      <div>
+        <div className={(!this.state.show_tabs) ? 'App AppHideTabs' : 'App'}>
 
-        <div className='Header'>
-        <img src='sbucat_logo.svg' alt='sbu_cat_logo' className='Logo'/>
-          <h1 className='Title'>SBU Cat Network</h1>
-          <button
-            className='MenuToggle'
-            onClick={()=>{
-              this.setState({show_tabs: !this.state.show_tabs});
+          <div className='Header'>
+            <img src='sbucat_logo.svg' alt='sbu_cat_logo' className='Logo' />
+            <h1 className='Title'>SBU Cat Network</h1>
+            <button
+              className='MenuToggle'
+              onClick={() => {
+                this.setState({ show_tabs: !this.state.show_tabs });
+              }}
+            >
+              <i class="fas fa-bars" />
+            </button>
+          </div>
+
+          <TabBar
+            current_tab={this.state.current_tab}
+            on_change={(tab) => {
+              this.setState({
+                current_tab: tab.id,
+                show_tabs: false,
+              })
             }}
-          >
-            <i class="fas fa-bars"/>
-          </button>
+            tabs={this.props.tabs}
+          />
+
+          <Content
+            current_tab={this.state.current_tab}
+          />
+
+          <div className='Footer'>
+            <p>Created by Henry Long with <i className='fab fa-react' /> <i class="fab fa-sass" /> <i class="fab fa-font-awesome-flag"></i></p>
+          </div>
+
         </div>
-
-        <TabBar
-          current_tab={this.state.current_tab}
-          on_change={(tab) => {this.setState({
-            current_tab: tab.id,
-            show_tabs: false,
-          })}}
-          tabs={this.props.tabs}
-        />
-
-        <Content
-          current_tab={this.state.current_tab}
-        />
-
-        <div className='Footer'>
-          <p>Created by Henry Long with <i className='fab fa-react'/> <i class="fab fa-sass"/> <i class="fab fa-font-awesome-flag"></i></p>
-        </div>
-
       </div>
     );
   }
