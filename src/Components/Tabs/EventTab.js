@@ -9,12 +9,12 @@ class EventTab extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <h1>Events</h1>
         <hr/>
         {
           events.semester_list.map((semester) => (
-            <div>
+            <>
               <h2>{semester.semester}</h2>
               <div className='EventsList'>
                 {semester.event_list.map((item) => (
@@ -26,11 +26,11 @@ class EventTab extends Component {
                   </div>
                 ))}
               </div>
-            </div>
+            </>
           ))
         }
 
-      </div>
+      </>
     );
   }
 }

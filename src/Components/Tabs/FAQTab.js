@@ -10,18 +10,18 @@ class FAQTab extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <h1>FAQ</h1>
         <hr />
         {
           faq.faq_list.map((item) => (
-            <div>
+            <>
               <h2>{item.question}</h2>
               <p>{item.answer}</p>
-            </div>
+            </>
           ))
         }
-      </div>
+      </>
     );
   }
 }
